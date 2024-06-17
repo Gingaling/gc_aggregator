@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Graphic Cards Descriptions</title>
+	</head>
+	<body>
+		<input
+			type="file"
+			id="fileInput"
+			accept=".txt" />
+		<table id="cardTable">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Model</th>
+					<th>Features</th>
+				</tr>
+			</thead>
+			<tbody id="cardData"></tbody>
+		</table>
+
+		<script>
+			document
+				.getElementById('fileInput')
+				.addEventListener('change', handleFileSelect);
+
+			function handleFileSelect(event) {
+				const file = event.target.files[0];
+				if (!file) return;
+
+				const reader = new FileReader();
+				reader.onload = function (event) {
+					const fileContent = event.target.result;
+					const cards = parseDescriptions(fileContent);
+					displayCards(cards);
+				};
+				reader.readAsText(file);
+			}
+
+			function parseDescriptions(content) {
+				const lines = content.split('\n');
+				const cards = [];
+
+				for (const line of lines) {
+					const [name, model, features] = line.split(';');
+					cards.push({ name, model, features });
+				}
+
+				return cards;
+			}
+
+			function displayCards(cards) {
+				const tableBody = document.getElementById('cardData');
+				tableBody.innerHTML = '';
+
+				for (const card of cards) {
+					const row = document.createElement('tr');
+					row.innerHTML = `
+                    <td>${card.name}</td>
+                    <td>${card.model}</td>
+                    <td>${card.features}</td>
+                `;
+					tableBody.appendChild(row);
+				}
+			}
+		</script>
+	</body>
+</html>
