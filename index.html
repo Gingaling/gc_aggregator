@@ -6,6 +6,7 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
 		<title>Graphic Cards Aggregator</title>
+    <!-- <link rel="stylesheet" href="/style.css" /> -->
 	</head>
 	<body>
 		<input
@@ -22,51 +23,7 @@
 			</thead>
 			<tbody id="cardData"></tbody>
 		</table>
-
-		<script>
-			document
-				.getElementById('fileInput')
-				.addEventListener('change', handleFileSelect);
-
-			function handleFileSelect(event) {
-				const file = event.target.files[0];
-				if (!file) return;
-
-				const reader = new FileReader();
-				reader.onload = function (event) {
-					const fileContent = event.target.result;
-					const cards = parseDescriptions(fileContent);
-					displayCards(cards);
-				};
-				reader.readAsText(file);
-			}
-
-			function parseDescriptions(content) {
-				const lines = content.split('\n');
-				const cards = [];
-
-				for (const line of lines) {
-					const [name, model, features] = line.split(';');
-					cards.push({ name, model, features });
-				}
-
-				return cards;
-			}
-
-			function displayCards(cards) {
-				const tableBody = document.getElementById('cardData');
-				tableBody.innerHTML = '';
-
-				for (const card of cards) {
-					const row = document.createElement('tr');
-					row.innerHTML = `
-                    <td>${card.name}</td>
-                    <td>${card.model}</td>
-                    <td>${card.features}</td>
-                `;
-					tableBody.appendChild(row);
-				}
-			}
-		</script>
+        <script src="script.js"  type="text/javascript"></script
+		
 	</body>
 </html>
