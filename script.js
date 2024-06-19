@@ -33,7 +33,8 @@ function handleFileSelect(event) {
 		const records = fileContent.split('\n');
 
 		// Assuming the first record contains field names (header line)
-		const fieldNames = ['name', 'bestFor', 'features'];
+		const headerNames = ['Manufacturer', 'Model', 'Best For', 'Features'];
+		const fieldNames = ['manufacturer', 'model', 'bestFor', 'features'];
 
 		// Process each record
 		for (const record of records) {
@@ -49,6 +50,7 @@ function handleFileSelect(event) {
 
 		// Now you have an array of parsed records (including the header line)
 		console.log(parsedRecords);
+		displayHeaders(headerNames);
 		displayCards(parsedRecords);
 	};
 	reader.readAsText(file);
@@ -64,6 +66,16 @@ function handleFileSelect(event) {
 
 // 	return cards;
 // }
+function displayHeaders(headerNames) {
+	const headerRow = document.getElementById('headerRow');
+	headerRow.innerHTML = '';
+
+	for (const headerName of headerNames) {
+		const th = document.createElement('th');
+		th.textContent = headerName;
+		headerRow.appendChild(th);
+	}
+}
 
 function displayCards(cards) {
 	console.log(cards);
@@ -73,7 +85,8 @@ function displayCards(cards) {
 	for (const card of cards) {
 		const row = document.createElement('tr');
 		row.innerHTML = `
-                    <td>${card.name}</td>
+                    <td>${card.manufacturer}</td>
+					<td>${card.model}</td>
                     <td>${card.bestFor}</td>
                     <td>${card.features}</td>
                 `;

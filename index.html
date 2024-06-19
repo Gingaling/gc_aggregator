@@ -101,8 +101,12 @@
 						<label for="manufacturer">Zotac</label>
 					</div>
 				</div>
-				<h3>VRAM</h3>
-				<div>
+				<button
+					type="button"
+					class="collapsible">
+					VRAM
+				</button>
+				<div class="content">
 					<div>
 						<input
 							id="vram"
@@ -137,8 +141,12 @@
 					</div>
 				</div>
 
-				<h3>Clock Speed</h3>
-				<div>
+				<button
+					type="button"
+					class="collapsible">
+					Clock Speed
+				</button>
+				<div class="content">
 					<div>
 						<input
 							id="clock"
@@ -173,8 +181,12 @@
 					</div>
 				</div>
 
-				<h3>Memory Bus Width</h3>
-				<div>
+				<button
+					type="button"
+					class="collapsible">
+					Memory Bus Width
+				</button>
+				<div class="content">
 					<div>
 						<input
 							id="gpu"
@@ -209,8 +221,12 @@
 					</div>
 				</div>
 
-				<h3>CUDA Cores/Stream Processors</h3>
-				<div>
+				<button
+					type="button"
+					class="collapsible">
+					CUDA Cores/Stream Processors
+				</button>
+				<div class="content">
 					<div>
 						<input
 							id="gpu"
@@ -245,8 +261,12 @@
 					</div>
 				</div>
 
-				<h3>TDP</h3>
-				<div>
+				<button
+					type="button"
+					class="collapsible">
+					TDP
+				</button>
+				<div class="content">
 					<div>
 						<input
 							id="gpu"
@@ -281,8 +301,12 @@
 					</div>
 				</div>
 
-				<h3>Ports</h3>
-				<div>
+				<button
+					type="button"
+					class="collapsible">
+					Ports
+				</button>
+				<div class="content">
 					<div>
 						<input
 							id="gpu"
@@ -317,8 +341,12 @@
 					</div>
 				</div>
 
-				<h3>Form Factor</h3>
-				<div>
+				<button
+					type="button"
+					class="collapsible">
+					Form Factor
+				</button>
+				<div class="content">
 					<div>
 						<input
 							id="gpu"
@@ -353,8 +381,12 @@
 					</div>
 				</div>
 
-				<h3>Cooling Solution</h3>
-				<div>
+				<button
+					type="button"
+					class="collapsible">
+					Cooling Solution
+				</button>
+				<div class="content">
 					<div>
 						<input
 							id="cooling"
@@ -373,8 +405,12 @@
 					</div>
 				</div>
 
-				<h3>Ray Tracing/DLSS</h3>
-				<div>
+				<button
+					type="button"
+					class="collapsible">
+					Ray Tracing/DLSS
+				</button>
+				<div class="content">
 					<div>
 						<input
 							id="ray"
@@ -393,8 +429,12 @@
 					</div>
 				</div>
 
-				<h3>Connectors</h3>
-				<div>
+				<button
+					type="button"
+					class="collapsible">
+					Connectors
+				</button>
+				<div class="content">
 					<div>
 						<input
 							id="gpu"
@@ -448,11 +488,7 @@
 
 			<table id="cardTable">
 				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Best For</th>
-						<th>Features</th>
-					</tr>
+					<tr id="headerRow"></tr>
 				</thead>
 				<tbody id="cardData"></tbody>
 			</table>
