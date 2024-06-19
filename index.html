@@ -1,3 +1,5 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -6,24 +8,47 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
 		<title>Graphic Cards Aggregator</title>
-    <!-- <link rel="stylesheet" href="/style.css" /> -->
+		<link
+			rel="stylesheet"
+			href="style.css" />
 	</head>
 	<body>
-		<input
-			type="file"
-			id="fileInput"
-			accept=".txt" />
-		<table id="cardTable">
-			<thead>
-				<tr>
-					<th>Name</th>
-					<th>Best For</th>
-					<th>Features</th>
-				</tr>
-			</thead>
-			<tbody id="cardData"></tbody>
-		</table>
-        <script src="script.js"  type="text/javascript"></script
-		
+		<div id="filter">
+			<label for="search">Search:</label>
+			<input
+				type="text"
+				id="search"
+				placeholder="Search for a graphic card" />
+			<h3>or filter your results</h3>
+			<div>
+				<label for="bestFor">Best For:</label>
+				<select id="bestFor">
+					<option value="">All</option>
+					<option value="gaming">Gaming</option>
+					<option value="workstation">Workstation</option>
+					<option value="casual">Casual</option>
+				</select>
+			</div>
+		</div>
+		<div>
+			<input
+				type="file"
+				id="fileInput"
+				accept=".txt" />
+
+			<table id="cardTable">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Best For</th>
+						<th>Features</th>
+					</tr>
+				</thead>
+				<tbody id="cardData"></tbody>
+			</table>
+		</div>
+		<script
+			src="script.js"
+			type="text/javascript"></script>
 	</body>
 </html>
