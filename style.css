@@ -12,6 +12,17 @@ header {
 	font-size: 25px;
 }
 
+button#price {
+	background-color: #126c39;
+	color: white;
+	font-weight: bolder;
+	padding: 7px 10px;
+	margin: 2px 0;
+	border: none;
+	cursor: pointer;
+	width: 85%;
+}
+
 button.collapsible {
 	background-color: #1b1258;
 	color: white;
@@ -50,6 +61,7 @@ button.collapsible {
 }
 
 .content {
+	margin: 0 0 10px 0;
 	padding: 0 18px;
 	display: none;
 	overflow: hidden;

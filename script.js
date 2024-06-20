@@ -32,9 +32,20 @@ function handleFileSelect(event) {
 		// Split the file contents into individual records
 		const records = fileContent.split('\n');
 
-		// Assuming the first record contains field names (header line)
-		const headerNames = ['Manufacturer', 'Model', 'Best For', 'Features'];
-		const fieldNames = ['manufacturer', 'model', 'bestFor', 'features'];
+		const headerNames = [
+			'Price',
+			'Manufacturer',
+			'Model',
+			'Best For',
+			'Features',
+		];
+		const fieldNames = [
+			'price',
+			'manufacturer',
+			'model',
+			'bestFor',
+			'features',
+		];
 
 		// Process each record
 		for (const record of records) {
@@ -56,16 +67,6 @@ function handleFileSelect(event) {
 	reader.readAsText(file);
 }
 
-// function parseDescriptions(content) {
-// 	const lines = content.split('\n');
-// 	const cards = [];
-// 	for (const line of lines) {
-// 		const [name, bestFor, features] = line.split(';');
-// 		cards.push({ name, bestFor, features });
-// 	}
-
-// 	return cards;
-// }
 function displayHeaders(headerNames) {
 	const headerRow = document.getElementById('headerRow');
 	headerRow.innerHTML = '';

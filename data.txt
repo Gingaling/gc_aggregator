@@ -1,10 +1,10 @@
-NVIDIA; GeForce RTX 3080;High-end gaming GPU;8GB GDDR6X;Ray tracing support
-AMD; Radeon RX 6800 XT;Powerful for 4K gaming;16GB GDDR6;RDNA 2 architecture
-NVIDIA; GeForce GTX 1660 Super;Budget-friendly option;6GB GDDR5;1080p gaming
-MSI; Radeon RX 5700 XT Gaming X;Great cooling performance;8GB GDDR6;PCIe 4.0
-ASUS; TUF Gaming GeForce GTX 1650;Entry-level gaming card;4GB GDDR5;Low power consumption
-Gigabyte; AORUS GeForce RTX 3090;Extreme performance;24GB GDDR6X;Triple-fan design
-EVGA; GeForce RTX 3060 Ti XC Gaming;Mid-range powerhouse;8GB GDDR6;DLSS support
-ZOTAC; GeForce GT 1030;Basic GPU for HTPCs;2GB GDDR5;Low-profile design
-Sapphire; Pulse Radeon RX 5500 XT;Solid 1080p gaming;8GB GDDR6;Dual-X cooling
-XFX; Radeon RX 5600 XT Thicc II Pro;Competitive performance;6GB GDDR6;Factory overclocked
+$24; NVIDIA; GeForce RTX 3080;High-end gaming GPU;8GB GDDR6X;Ray tracing support
+$55; AMD; Radeon RX 6800 XT;Powerful for 4K gaming;16GB GDDR6;RDNA 2 architecture
+$29; NVIDIA; GeForce GTX 1660 Super;Budget-friendly option;6GB GDDR5;1080p gaming
+$15; MSI; Radeon RX 5700 XT Gaming X;Great cooling performance;8GB GDDR6;PCIe 4.0
+$48; ASUS; TUF Gaming GeForce GTX 1650;Entry-level gaming card;4GB GDDR5;Low power consumption
+$75; Gigabyte; AORUS GeForce RTX 3090;Extreme performance;24GB GDDR6X;Triple-fan design
+$22; EVGA; GeForce RTX 3060 Ti XC Gaming;Mid-range powerhouse;8GB GDDR6;DLSS support
+$46; ZOTAC; GeForce GT 1030;Basic GPU for HTPCs;2GB GDDR5;Low-profile design
+$19; Sapphire; Pulse Radeon RX 5500 XT;Solid 1080p gaming;8GB GDDR6;Dual-X cooling
+$37; XFX; Radeon RX 5600 XT Thicc II Pro;Competitive performance;6GB GDDR6;Factory overclocked
