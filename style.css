@@ -1,7 +1,9 @@
 /* style.css */
+
 body {
 	display: block;
 	margin: 8px;
+	font-size: 14px;
 }
 
 header {
@@ -43,6 +45,14 @@ button.collapsible {
 	vertical-align: top;
 }
 
+container#container {
+	display: inline-block;
+	background-color: #e1eaf6;
+	margin: 10px;
+	padding: 10px;
+	vertical-align: top;
+}
+
 .collapsible {
 	background-color: #777;
 	color: white;
@@ -73,9 +83,23 @@ table {
 	width: 100%;
 }
 
-th,
+th {
+	border: 1px solid #ddd;
+	padding: 8px;
+	color: white;
+	text-align: left;
+	background-color: #1b1258;
+}
+
 td {
 	border: 1px solid #ddd;
 	padding: 8px;
 	text-align: left;
+}
+
+tr:nth-child(odd) {
+	background-color: #ffffff;
+}
+
+input {
 }
