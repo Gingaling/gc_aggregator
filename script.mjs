@@ -1,4 +1,6 @@
 import { displayCards } from './modules/displayCards.mjs';
+import { displayHeaders } from './modules/displayHeaders.mjs';
+import { sortTable } from './modules/sortTable.mjs';
 
 document
 	.getElementById('fileInput')
@@ -21,6 +23,30 @@ for (i = 0; i < coll.length; i++) {
 		}
 	});
 }
+
+const searchInput = document.getElementById('searchInput');
+const tableBody = document.getElementById('cardTable');
+const headerRow = document.getElementById('headerRow');
+
+searchInput.addEventListener('keyup', (event) => {
+	const searchTerm = event.target.value.toLowerCase();
+	const tableRows = tableBody.querySelectorAll('tr');
+
+	for (const row of tableRows) {
+		const tableData = row.querySelectorAll('td');
+		let isVisible = false;
+
+		for (const data of tableData) {
+			const textContent = data.textContent.toLowerCase();
+			if (textContent.indexOf(searchTerm) !== -1) {
+				isVisible = true;
+				break;
+			}
+		}
+		headerRow.style.display = '';
+		row.style.display = isVisible ? '' : 'none';
+	}
+});
 
 function handleFileSelect(event) {
 	const file = event.target.files[0];
@@ -59,55 +85,60 @@ function handleFileSelect(event) {
 	reader.readAsText(file);
 }
 
-function displayTableOnConsole() {
-	const table = document.getElementById('cardTable');
-	console.log(table);
-}
+// function displayHeaders(headerNames) {
+// 	const headerRow = document.getElementById('headerRow');
+// 	headerRow.innerHTML = '';
 
-function displayHeaders(headerNames) {
-	const headerRow = document.getElementById('headerRow');
-	headerRow.innerHTML = '';
+// 	for (let j = 0; j < headerNames.length; j++) {
+// 		const th = document.createElement('th');
+// 		th.textContent = headerNames[j];
+// 		th.addEventListener('click', (event) => {
+// 			event.stopPropagation(); // Prevent bubbling up
+// 			sortTable(j); // Access j directly within arrow function
+// 		});
+// 		headerRow.appendChild(th);
+// 	}
+// }
 
-	for (let j = 0; j < headerNames.length; j++) {
-		const th = document.createElement('th');
-		th.textContent = headerNames[j];
-		th.addEventListener('click', (event) => {
-			event.stopPropagation(); // Prevent bubbling up
-			sortTable(j); // Access j directly within arrow function
-		});
-		headerRow.appendChild(th);
-	}
-}
+// function sortTable(n) {
+// 	const table = document.getElementById('cardTable');
+// 	const rows = Array.from(table.rows); // Convert HTMLCollection to array
 
-function sortTable(n) {
-	console.log('Sorting by column:', n);
-	const table = document.getElementById('cardTable');
-	const rows = Array.from(table.rows); // Convert HTMLCollection to array
+// 	// Remove header row
+// 	const headerRow = rows.shift(); // Remove and store the first element (header)
 
-	console.log(table);
+// 	// Sort rows based on content of column n
+// 	rows.sort((rowA, rowB) => {
+// 		const cellA = rowA.cells[n].textContent.trim(); // Remove leading/trailing whitespace
 
-	// Remove header row
-	const headerRow = rows.shift(); // Remove and store the first element (header)
+// 		// Handle different data types
+// 		if (!isNaN(cellA) && !isNaN(rowB.cells[n].textContent.trim())) {
+// 			// Numbers
+// 			return parseFloat(cellA) - parseFloat(rowB.cells[n].textContent.trim());
+// 		} else {
+// 			// Strings (default)
+// 			return cellA
+// 				.toLowerCase()
+// 				.localeCompare(rowB.cells[n].textContent.trim().toLowerCase());
+// 		}
+// 	});
 
-	// Sort rows based on content of column n
+// 	// Update table body with sorted rows
+// 	table.innerHTML = '';
+// 	table.appendChild(headerRow); // Add the header back after sorting
+// 	rows.forEach((row) => table.appendChild(row));
+// }
 
-	rows.sort((rowA, rowB) => {
-		const cellA = rowA.cells[n].textContent.trim(); // Remove leading/trailing whitespace
+// function searchTable() {
+// 	const search = document.getElementById('searchInput').value.toLowerCase();
+// 	const table = document.getElementById('cardTable');
+// 	const rows = Array.from(table.rows);
 
-		// Handle different data types here
-		if (!isNaN(cellA) && !isNaN(rowB.cells[n].textContent.trim())) {
-			// Numbers
-			return parseFloat(cellA) - parseFloat(rowB.cells[n].textContent.trim());
-		} else {
-			// Strings (default)
-			return cellA
-				.toLowerCase()
-				.localeCompare(rowB.cells[n].textContent.trim().toLowerCase());
-		}
-	});
-
-	// Update table body with sorted rows
-	table.innerHTML = '';
-	table.appendChild(headerRow); // Add the header back after sorting
-	rows.forEach((row) => table.appendChild(row));
-}
+// 	rows.forEach((row) => {
+// 		const cells = Array.from(row.cells);
+// 		const found = cells.some((cell) =>
+// 			cell.textContent.toLowerCase().includes(search)
+// 		);
+// 		row.style.display = found ? '' : 'none';
+// 	});
+// }

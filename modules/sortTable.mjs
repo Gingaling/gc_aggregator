@@ -1,68 +1,28 @@
-th.textContent = headerName;
+export function sortTable(n) {
+	const table = document.getElementById('cardTable');
+	const rows = Array.from(table.rows); // Convert HTMLCollection to array
 
-// th.setAttribute('onclick', 'sortTable(' + j + ')');
+	// Remove header row
+	const headerRow = rows.shift(); // Remove and store the first element (header)
 
-// function sortTable(n) {
-// 	console.log('hello');
-// 	var table,
-// 		rows,
-// 		switching,
-// 		i,
-// 		x,
-// 		y,
-// 		shouldSwitch,
-// 		dir,
-// 		switchcount = 0;
-// 	table = document.getElementById('cardTable');
-// 	console.log(table);
-// 	console.log(table.rows);
+	// Sort rows based on content of column n
+	rows.sort((rowA, rowB) => {
+		const cellA = rowA.cells[n].textContent.trim(); // Remove leading/trailing whitespace
 
-// 	switching = true;
-// 	//Set the sorting direction to ascending:
-// 	dir = 'asc';
-// 	/*Make a loop that will continue until no switching has been done:*/
-// 	while (switching) {
-// 		//start by saying: no switching is done:
-// 		switching = false;
-// 		rows = table.rows;
-// 		/*Loop through all table rows (except the
-// 	first, which contains table headers):*/
-// 		for (i = 1; i < rows.length - 1; i++) {
-// 			//start by saying there should be no switching:
-// 			shouldSwitch = false;
-// 			/*Get the two elements you want to compare, one from current row and one from the next:*/
-// 			x = rows[i].getElementsByTagName('TD')[n];
-// 			y = rows[i + 1].getElementsByTagName('TD')[n];
-// 			/*check if the two rows should switch place,
-// 	  based on the direction, asc or desc:*/
-// 			if (dir == 'asc') {
-// 				if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-// 					//if so, mark as a switch and break the loop:
-// 					shouldSwitch = true;
-// 					break;
-// 				}
-// 			} else if (dir == 'desc') {
-// 				if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-// 					//if so, mark as a switch and break the loop:
-// 					shouldSwitch = true;
-// 					break;
-// 				}
-// 			}
-// 		}
-// 		if (shouldSwitch) {
-// 			/*If a switch has been marked, make the switch
-// 	  and mark that a switch has been done:*/
-// 			rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-// 			switching = true;
-// 			//Each time a switch is done, increase this count by 1:
-// 			switchcount++;
-// 		} else {
-// 			/*If no switching has been done AND the direction is "asc",
-// 	  set the direction to "desc" and run the while loop again.*/
-// 			if (switchcount == 0 && dir == 'asc') {
-// 				dir = 'desc';
-// 				switching = true;
-// 			}
-// 		}
-// 	}
-// }
+		// Handle different data types
+		if (!isNaN(cellA) && !isNaN(rowB.cells[n].textContent.trim())) {
+			// Numbers
+			return parseFloat(cellA) - parseFloat(rowB.cells[n].textContent.trim());
+		} else {
+			// Strings (default)
+			return cellA
+				.toLowerCase()
+				.localeCompare(rowB.cells[n].textContent.trim().toLowerCase());
+		}
+	});
+
+	// Update table body with sorted rows
+	table.innerHTML = '';
+	table.appendChild(headerRow); // Add the header back after sorting
+	rows.forEach((row) => table.appendChild(row));
+}
