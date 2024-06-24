@@ -1,0 +1,21 @@
+body {
+	background-color: #f5f5f5;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	color: #333;
+	margin: 20px;
+	padding: 0;
+}
+
+img {
+	display: block;
+	margin: 0 auto;
+	max-width: 25%;
+	height: auto;
+}
+
+span#disclaimer {
+	font-style: italic;
+	font-weight: bolder;
+}
