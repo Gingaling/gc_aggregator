@@ -103,6 +103,7 @@ tr:nth-child(odd) {
 	background-color: #ffffff;
 }
 
+<<<<<<< HEAD
 input#searchInput {
 	width: 75%;
 	padding: 12px 20px;
@@ -134,4 +135,27 @@ label {
 	height: 30px;
 	padding: 3px 0 0 0;
 	vertical-align: middle;
+=======
+input {
+	display: inline-block;
+	width: 70%;
+}
+
+img#logo {
+	display: block;
+	margin: 0 auto;
+	max-width: 50%;
+	height: auto;
+}
+
+label {
+	display: block;
+	font-weight: bolder;
+	padding: 5px;
+}
+
+.fa-solid fa-magnifying-glass {
+	color: #126c39;
+	display: inline-block;
+>>>>>>> e0f6438c4161b5ddd2818d70f4814ed9d636c5de
 }
