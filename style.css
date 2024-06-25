@@ -1,6 +1,7 @@
 /* style.css */
 
 body {
+	font-family: Georgia, 'Times New Roman', Times, serif;
 	display: block;
 	margin: 8px;
 	font-size: 14px;
@@ -14,68 +15,69 @@ header {
 	font-size: 25px;
 }
 
+#alphaSection {
+	display: inline-block;
+	background-color: rgb(240, 243, 246);
+	text-align: center;
+	margin: 0 auto;
+	width: 15%;
+	vertical-align: top;
+}
+
 button#price {
-	background-color: #126c39;
+	background-color: #1b9f54;
 	color: white;
 	font-weight: bolder;
-	padding: 7px 10px;
+	padding: 5px;
 	margin: 2px 0;
 	border: none;
 	cursor: pointer;
-	width: 85%;
+	width: 75%;
 }
 
 button.collapsible {
-	background-color: #1b1258;
+	background-color: #150868c2;
 	color: white;
 	font-weight: bolder;
-	padding: 7px 10px;
-	margin: 2px 0;
+	text-align: center;
+	margin: 3px 0 0 0;
+	padding: 4px;
 	border: none;
 	cursor: pointer;
-	width: 85%;
-}
-
-#alphaSection {
-	display: inline-block;
-	background-color: #f1f1f1;
-	margin: 10px;
-	padding: 10px;
-	width: 40%;
-	vertical-align: top;
-}
-
-container#container {
-	display: inline-block;
-	background-color: #e1eaf6;
-	margin: 10px;
-	padding: 10px;
-	vertical-align: top;
+	width: 75%;
 }
 
 .collapsible {
 	background-color: #777;
 	color: white;
 	cursor: pointer;
-	padding: 18px;
-	width: 100%;
+	width: 75%;
 	border: none;
-	text-align: left;
+	text-align: right;
 	outline: none;
 	font-size: 15px;
 }
 
 .active,
 .collapsible:hover {
-	background-color: #555;
+	background-color: #d3d0f4;
 }
 
 .content {
-	margin: 0 0 10px 0;
-	padding: 0 18px;
+	width: 72%;
+	margin: 0 0 0 33px;
+	padding: 2px;
+	text-align: left;
 	display: none;
-	overflow: hidden;
-	background-color: #f1f1f1;
+	border: 2px solid #4d4d4d;
+}
+
+container#container {
+	display: inline-block;
+	background-color: #f0f0f3;
+	margin: 10px;
+	padding: 10px;
+	vertical-align: top;
 }
 
 table {
@@ -101,5 +103,35 @@ tr:nth-child(odd) {
 	background-color: #ffffff;
 }
 
-input {
+input#searchInput {
+	width: 75%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	background-color: #fbeeee;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+label {
+	font-weight: 80;
+}
+
+#inputSection {
+	display: inline-block;
+	background-color: white;
+	color: rgba(234, 202, 202, 0.945);
+	margin: 0 auto;
+	padding: 10px;
+	width: 40%;
+	vertical-align: top;
+	border: 5px solid #2611af;
+}
+
+#searchIcon {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	padding: 3px 0 0 0;
+	vertical-align: middle;
 }
