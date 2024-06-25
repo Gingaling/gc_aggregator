@@ -1,0 +1,560 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Graphic Cards Aggregator</title>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="style.css" />
+	</head>
+
+	<body>
+		<!-- <header>Graphic Cards Aggregator</header> -->
+		<div
+			id="alphaSection"
+			>
+						<img
+				id="logo"
+				src="Aggrogator-logo2.png"
+				alt="Aggrogator Logo" />
+			<label
+				id="search-label"
+				for="search"
+				style="font-weight: bolder"
+				>Search:</label>
+			<div id="input-section">
+				<img id=searchIcon" style="width:20px; height:20px;" src="1024px-Search_Icon.svg.png"></img>
+				<input
+				type="text"
+				id="searchInput"
+				placeholder="Search graphics cards" />
+			</div>
+			<h3>or filter your results</h3>
+			<div>
+				<button
+					type="button"
+					class="collapsible"
+					id="price">
+					Price Range
+				</button>
+				<div class="content">
+					<div>
+						<input
+							id="price"
+							type="checkbox"
+							name="manufacturer"
+							value="amd" />
+						<label for="price"><$20</label>
+					</div>
+					<div>
+						<input
+							id="manufacturer"
+							type="checkbox"
+							name="manufacturer"
+							value="asus" />
+						<label for="manufacturer">$20 - <$30</label>
+					</div>
+					<div>
+						<input
+							id="manufacturer"
+							type="checkbox"
+							name="manufacturer"
+							value="evga" />
+						<label for="manufacturer">$30 - <$40</label>
+					</div>
+					<div>
+						<input
+							id="manufacturer"
+							type="checkbox"
+							name="manufacturer"
+							value="gigabyte" />
+						<label for="manufacturer">$40 - <$50</label>
+					</div>
+					<div>
+						<input
+							id="manufacturer"
+							type="checkbox"
+							name="manufacturer"
+							value="msi" />
+						<label for="manufacturer">$50 - <$60</label>
+					</div>
+					<div>
+						<input
+							id="manufacturer"
+							type="checkbox"
+							name="manufacturer"
+							value="nvidia" />
+						<label for="manufacturer">$60 and above</label>
+					</div>
+				</div>
+				<div>
+					<button
+						type="button"
+						class="collapsible">
+						Manufacturer
+					</button>
+					<div class="content">
+						<div>
+							<input
+								id="manufacturer"
+								type="checkbox"
+								name="manufacturer"
+								value="amd" />
+							<label for="manufacturer">AMD</label>
+						</div>
+						<div>
+							<input
+								id="manufacturer"
+								type="checkbox"
+								name="manufacturer"
+								value="asus" />
+							<label for="manufacturer">ASUS</label>
+						</div>
+						<div>
+							<input
+								id="manufacturer"
+								type="checkbox"
+								name="manufacturer"
+								value="evga" />
+							<label for="manufacturer">EVGA</label>
+						</div>
+						<div>
+							<input
+								id="manufacturer"
+								type="checkbox"
+								name="manufacturer"
+								value="gigabyte" />
+							<label for="manufacturer">Gigabyte</label>
+						</div>
+						<div>
+							<input
+								id="manufacturer"
+								type="checkbox"
+								name="manufacturer"
+								value="msi" />
+							<label for="manufacturer">MSI</label>
+						</div>
+						<div>
+							<input
+								id="manufacturer"
+								type="checkbox"
+								name="manufacturer"
+								value="nvidia" />
+							<label for="manufacturer">Nvidia</label>
+						</div>
+						<div>
+							<input
+								id="manufacturer"
+								type="checkbox"
+								name="manufacturer"
+								value="pny" />
+							<label for="manufacturer">PNY Technologies</label>
+						</div>
+						<div>
+							<input
+								id="manufacturer"
+								type="checkbox"
+								name="manufacturer"
+								value="zotac" />
+							<label for="manufacturer">Zotac</label>
+						</div>
+					</div>
+					<button
+						type="button"
+						class="collapsible">
+						VRAM
+					</button>
+					<div class="content">
+						<div>
+							<input
+								id="vram"
+								type="checkbox"
+								name="vram"
+								value="gddr" />
+							<label for="vram">GDDR</label>
+						</div>
+						<div>
+							<input
+								id="vram"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="vram">Nvidia</label>
+						</div>
+						<div>
+							<input
+								id="vram"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="vram">Nvidia</label>
+						</div>
+						<div>
+							<input
+								id="vram"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="vram">Nvidia</label>
+						</div>
+					</div>
+
+					<button
+						type="button"
+						class="collapsible">
+						Clock Speed
+					</button>
+					<div class="content">
+						<div>
+							<input
+								id="clock"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="clock">Nvidia</label>
+						</div>
+						<div>
+							<input
+								id="clock"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="clock">Nvidia</label>
+						</div>
+						<div>
+							<input
+								id="clock"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="clock">Nvidia</label>
+						</div>
+						<div>
+							<input
+								id="clock"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="clock">Nvidia</label>
+						</div>
+					</div>
+
+					<button
+						type="button"
+						class="collapsible">
+						Memory Bus Width
+					</button>
+					<div class="content">
+						<div>
+							<input
+								id="gpu"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="gpu">Nvidia</label>
+						</div>
+						<div>
+							<input
+								id="gpu"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="gpu">Nvidia</label>
+						</div>
+						<div>
+							<input
+								id="gpu"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="gpu">Nvidia</label>
+						</div>
+						<div>
+							<input
+								id="gpu"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="gpu">Nvidia</label>
+						</div>
+					</div>
+
+					<button
+						type="button"
+						class="collapsible">
+						CUDA Cores/Stream Processors
+					</button>
+					<div class="content">
+						<div>
+							<input
+								id="gpu"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="gpu">Nvidia</label>
+						</div>
+						<div>
+							<input
+								id="gpu"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="gpu">Nvidia</label>
+						</div>
+						<div>
+							<input
+								id="gpu"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="gpu">Nvidia</label>
+						</div>
+						<div>
+							<input
+								id="gpu"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="gpu">Nvidia</label>
+						</div>
+					</div>
+
+					<button
+						type="button"
+						class="collapsible">
+						TDP
+					</button>
+					<div class="content">
+						<div>
+							<input
+								id="gpu"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="gpu">Nvidia</label>
+						</div>
+						<div>
+							<input
+								id="gpu"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="gpu">Nvidia</label>
+						</div>
+						<div>
+							<input
+								id="gpu"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="gpu">Nvidia</label>
+						</div>
+						<div>
+							<input
+								id="gpu"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="gpu">Nvidia</label>
+						</div>
+					</div>
+
+					<button
+						type="button"
+						class="collapsible">
+						Ports
+					</button>
+					<div class="content">
+						<div>
+							<input
+								id="gpu"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="gpu">Nvidia</label>
+						</div>
+						<div>
+							<input
+								id="gpu"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="gpu">Nvidia</label>
+						</div>
+						<div>
+							<input
+								id="gpu"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="gpu">Nvidia</label>
+						</div>
+						<div>
+							<input
+								id="gpu"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="gpu">Nvidia</label>
+						</div>
+					</div>
+
+					<button
+						type="button"
+						class="collapsible">
+						Form Factor
+					</button>
+					<div class="content">
+						<div>
+							<input
+								id="gpu"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="gpu">Nvidia</label>
+						</div>
+						<div>
+							<input
+								id="gpu"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="gpu">Nvidia</label>
+						</div>
+						<div>
+							<input
+								id="gpu"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="gpu">Nvidia</label>
+						</div>
+						<div>
+							<input
+								id="gpu"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="gpu">Nvidia</label>
+						</div>
+					</div>
+
+					<button
+						type="button"
+						class="collapsible">
+						Cooling Solution
+					</button>
+					<div class="content">
+						<div>
+							<input
+								id="cooling"
+								type="checkbox"
+								name="cooling"
+								value="fan" />
+							<label for="fan">Fan</label>
+						</div>
+						<div>
+							<input
+								id="cooling"
+								type="checkbox"
+								name="cooling"
+								value="heatsink" />
+							<label for="heatsink">Heatsink</label>
+						</div>
+					</div>
+
+					<button
+						type="button"
+						class="collapsible">
+						Ray Tracing/DLSS
+					</button>
+					<div class="content">
+						<div>
+							<input
+								id="ray"
+								type="checkbox"
+								name="ray"
+								value="raytr" />
+							<label for="raytr">Ray Tracing</label>
+						</div>
+						<div>
+							<input
+								id="ray"
+								type="checkbox"
+								name="ray"
+								value="DLSS" />
+							<label for="DLSS">DLSS</label>
+						</div>
+					</div>
+
+					<button
+						type="button"
+						class="collapsible">
+						Connectors
+					</button>
+					<div class="content">
+						<div>
+							<input
+								id="gpu"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="gpu">Nvidia</label>
+						</div>
+						<div>
+							<input
+								id="gpu"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="gpu">Nvidia</label>
+						</div>
+						<div>
+							<input
+								id="gpu"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="gpu">Nvidia</label>
+						</div>
+						<div>
+							<input
+								id="gpu"
+								type="checkbox"
+								name="gpu"
+								value="nvidia" />
+							<label for="gpu">Nvidia</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<input
+				type="file"
+				id="fileInput"
+				accept=".txt"
+				value="Hi" />
+		</div>
+
+
+
+		<!-- <div style="display: inline-block; width: 50%;"> -->
+		<container id="container">
+			<table id="cardTable">
+				<thead>
+					<tr id="headerRow"></tr>
+				</thead>
+				<tbody id="cardData"></tbody>
+			</table>
+		</container>
+		<!-- </div> -->
+		<script
+			src="script.mjs"
+			type="module"></script>
+	</body>
+</html>
