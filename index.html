@@ -17,9 +17,8 @@
 	<body>
 		<!-- <header>Graphic Cards Aggregator</header> -->
 		<div
-			id="alphaSection"
-			>
-						<img
+			id="alphaSection">
+			<img
 				id="logo"
 				src="Aggrogator-logo2.png"
 				alt="Aggrogator Logo" />
@@ -27,70 +26,73 @@
 				id="search-label"
 				for="search"
 				style="font-weight: bolder"
-				>Search:</label>
-			<div id="input-section">
-				<img id=searchIcon" style="width:20px; height:20px;" src="1024px-Search_Icon.svg.png"></img>
-				<input
-				type="text"
-				id="searchInput"
-				placeholder="Search graphics cards" />
-			</div>
-			<h3>or filter your results</h3>
-			<div>
-				<button
-					type="button"
-					class="collapsible"
-					id="price">
-					Price Range
-				</button>
-				<div class="content">
+				>Search:
+			</label>
+			<img id=searchIcon" style="width:20px; height:20px;" src="1024px-Search_Icon.svg.png">
+		</img>
+		<input
+			type="text"
+			id="searchInput"
+			placeholder="Search graphics cards">
+		</input>
+		<h3>or filter your results</h3>
+		<div>
+			<button
+				type="button"
+				class="collapsible"
+				id="price">
+				Price Range
+			</button>
+			<div class="content">
+				<div>
+					<input
+						id="price"
+						type="checkbox"
+						name="price"
+						value="00-20" />
+						<label
+							for="price"><$20
+						</label>
+					</div>
 					<div>
 						<input
 							id="price"
 							type="checkbox"
-							name="manufacturer"
-							value="amd" />
-						<label for="price"><$20</label>
+							name="price"
+							value="20-30" />
+						<label for="price">$20 - <$30</label>
 					</div>
 					<div>
 						<input
-							id="manufacturer"
+							id="price"
 							type="checkbox"
-							name="manufacturer"
-							value="asus" />
-						<label for="manufacturer">$20 - <$30</label>
+							name="price"
+							value="30-40" />
+						<label for="price">$30 - <$40</label>
 					</div>
 					<div>
 						<input
-							id="manufacturer"
+							id="price"
 							type="checkbox"
-							name="manufacturer"
-							value="evga" />
-						<label for="manufacturer">$30 - <$40</label>
+							name="price"
+							value="40-50" />
+						<label for="price">$40 - <$50</label>
 					</div>
 					<div>
 						<input
-							id="manufacturer"
+							id="price"
 							type="checkbox"
-							name="manufacturer"
-							value="gigabyte" />
-						<label for="manufacturer">$40 - <$50</label>
+							name="price"
+							value="50-60" />
+						<label for="price">$50 - <$60</label>
 					</div>
 					<div>
 						<input
-							id="manufacturer"
+							id="price"
 							type="checkbox"
-							name="manufacturer"
-							value="msi" />
-						<label for="manufacturer">$50 - <$60</label>
-					</div>
-					<div>
-						<input
-							id="manufacturer"
-							type="checkbox"
-							name="manufacturer"
-							value="nvidia" />
-						<label for="manufacturer">$60 and above</label>
+							name="price"
+							value="60" />
+						<label for="price">$60 and above</label>
 					</div>
 				</div>
 				<div>

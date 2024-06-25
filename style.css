@@ -103,6 +103,16 @@ tr:nth-child(odd) {
 	background-color: #ffffff;
 }
 
+#logo {
+	display: block;
+	margin: 0 auto;
+	padding: 0 0 29px 0;
+	width: 60%;
+	height: auto;
+	text-align: center;
+	padding: 3px 0 0 0;
+}
+
 input#searchInput {
 	width: 75%;
 	padding: 12px 20px;
@@ -117,31 +127,10 @@ label {
 	font-weight: 80;
 }
 
-#inputSection {
-	display: inline-block;
-	background-color: white;
-	color: rgba(234, 202, 202, 0.945);
-	margin: 0 auto;
-	padding: 10px;
-	width: 40%;
-	vertical-align: top;
-	border: 5px solid #2611af;
-}
-
 #searchIcon {
 	display: inline-block;
 	width: 30px;
 	height: 30px;
 	padding: 3px 0 0 0;
 	vertical-align: middle;
-}
-
-#logo {
-	display: block;
-	margin: 0 auto;
-	padding: 0 0 29px 0;
-	width: 60%;
-	height: auto;
-	text-align: center;
-	padding: 3px 0 0 0;
 }
