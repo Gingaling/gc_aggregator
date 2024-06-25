@@ -48,6 +48,32 @@ searchInput.addEventListener('keyup', (event) => {
 	}
 });
 
+const filterInput = document.querySelectorAll(
+	'.content input[type="checkbox"]'
+);
+tableBody = document.getElementById('cardTable');
+headerRow = document.getElementById('headerRow');
+
+filterInput.addEventListener('change', (event) => {
+	const filterTerm = event.target.value.toLowerCase();
+	const tableRows = tableBody.querySelectorAll('tr');
+
+	for (const row of tableRows) {
+		const tableData = row.querySelectorAll('td');
+		let isVisible = false;
+
+		for (const data of tableData) {
+			const textContent = data.textContent.toLowerCase();
+			if (textContent.indexOf(searchTerm) !== -1) {
+				isVisible = true;
+				break;
+			}
+		}
+		headerRow.style.display = '';
+		row.style.display = isVisible ? '' : 'none';
+	}
+});
+
 function handleFileSelect(event) {
 	const file = event.target.files[0];
 	if (!file) return;
