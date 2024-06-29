@@ -2,79 +2,9 @@ import { displayCards } from './modules/displayCards.mjs';
 import { displayHeaders } from './modules/displayHeaders.mjs';
 import { sortTable } from './modules/sortTable.mjs';
 
-document
-	.getElementById('fileInput')
-	.addEventListener('change', handleFileSelect);
-
-const parsedRecords = []; // Declare the array globally
-
-var coll = document.getElementsByClassName('collapsible');
-var i;
-
-for (i = 0; i < coll.length; i++) {
-	coll[i].addEventListener('click', function (event) {
-		event.stopPropagation(); // Prevent bubbling up
-		this.classList.toggle('active');
-		var content = this.nextElementSibling;
-		if (content.style.display === 'block') {
-			content.style.display = 'none';
-		} else {
-			content.style.display = 'block';
-		}
-	});
-}
-
-const searchInput = document.getElementById('searchInput');
-const tableBody = document.getElementById('cardTable');
-const headerRow = document.getElementById('headerRow');
-
-searchInput.addEventListener('keyup', (event) => {
-	const searchTerm = event.target.value.toLowerCase();
-	const tableRows = tableBody.querySelectorAll('tr');
-
-	for (const row of tableRows) {
-		const tableData = row.querySelectorAll('td');
-		let isVisible = false;
-
-		for (const data of tableData) {
-			const textContent = data.textContent.toLowerCase();
-			if (textContent.indexOf(searchTerm) !== -1) {
-				isVisible = true;
-				break;
-			}
-		}
-		headerRow.style.display = '';
-		row.style.display = isVisible ? '' : 'none';
-	}
-});
-
-const filterInput = document.querySelectorAll(
-	'.content input[type="checkbox"]'
-);
-tableBody = document.getElementById('cardTable');
-headerRow = document.getElementById('headerRow');
-
-filterInput.addEventListener('change', (event) => {
-	const filterTerm = event.target.value.toLowerCase();
-	const tableRows = tableBody.querySelectorAll('tr');
-
-	for (const row of tableRows) {
-		const tableData = row.querySelectorAll('td');
-		let isVisible = false;
-
-		for (const data of tableData) {
-			const textContent = data.textContent.toLowerCase();
-			if (textContent.indexOf(searchTerm) !== -1) {
-				isVisible = true;
-				break;
-			}
-		}
-		headerRow.style.display = '';
-		row.style.display = isVisible ? '' : 'none';
-	}
-});
-
 function handleFileSelect(event) {
+	const parsedRecords = []; // Declare the array globally
+
 	const file = event.target.files[0];
 	if (!file) return;
 	const reader = new FileReader();
@@ -103,10 +33,95 @@ function handleFileSelect(event) {
 		}
 
 		// Now you have an array of parsed records (including the header line)
-		console.log(parsedRecords);
 		displayCards(parsedRecords);
 		displayHeaders(headerFields);
 		sortTable();
 	};
 	reader.readAsText(file);
+}
+
+document
+	.getElementById('fileInput')
+	.addEventListener('change', handleFileSelect);
+
+const coll = document.getElementsByClassName('collapsible');
+
+for (let i = 0; i < coll.length; i++) {
+	coll[i].addEventListener('click', function (event) {
+		event.stopPropagation(); // Prevent bubbling up
+		this.classList.toggle('active');
+		let content = this.nextElementSibling;
+		if (content.style.display === 'block') {
+			content.style.display = 'none';
+		} else {
+			content.style.display = 'block';
+		}
+	});
+}
+
+const searchInput = document.getElementById('searchInput');
+const tableBody = document.getElementById('cardTable');
+const headerRow = document.getElementById('headerRow');
+
+searchInput.addEventListener('keyup', (event) => {
+	const searchTerm = event.target.value.toLowerCase();
+	console.log(searchTerm);
+	const tableRows = tableBody.querySelectorAll('tr');
+
+	for (const row of tableRows) {
+		const tableData = row.querySelectorAll('td');
+		for (const data of tableData) {
+			if (data.textContent.toLowerCase().indexOf(searchTerm) !== -1) {
+				isVisible = true;
+				break;
+			}
+		}
+		if (data.textContent.toLowerCase().indexOf(searchTerm) !== -1) {
+			isVisible = true;
+			break;
+		}
+
+		headerRow.style.display = '';
+		row.style.display = isVisible ? '' : 'none';
+	}
+});
+
+const filterInputs = document.getElementsByClassName('filter');
+
+for (const filterInput of filterInputs) {
+	filterInput.addEventListener('change', (event) => {
+		console.log(event);
+		if (!filterInput.checked) {
+			console.log('checkbox is checked:' + filterInput.checked);
+			row.style.display = 'none';
+			console.log(row);
+		} else if (filterInput.checked) {
+			console.log('checkbox is checked:' + filterInput.checked);
+			const filterTerm = filterInput.value.toLowerCase();
+			console.log(filterTerm);
+			const tableRows = tableBody.querySelectorAll('tr');
+
+			for (const row of tableRows) {
+				console.log(row);
+
+				if (row.id === 'headerRow') {
+					continue;
+				}
+				row.style.display = 'none';
+
+				const tableData = row.querySelectorAll('td');
+
+				for (const data of tableData) {
+					let textContent = data.textContent.toLowerCase();
+					if (textContent.indexOf(filterTerm) !== -1) {
+						data.style.display = '';
+						break;
+					}
+				}
+			}
+		}
+
+		headerRow.style.display = '';
+		row.style.display = isVisible ? '' : 'none';
+	});
 }

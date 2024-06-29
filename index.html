@@ -33,9 +33,10 @@
 		<input
 			type="text"
 			id="searchInput"
-			placeholder="Search graphics cards">
+			placeholder="find in search results">
 		</input>
-		<h3>or filter your results</h3>
+		<h5> -- or --</h5>
+		<h4 id="snippet1">filter your results</h4>
 		<div>
 			<button
 				type="button"
@@ -45,54 +46,65 @@
 			</button>
 			<div class="content">
 				<div>
+					<label for="price">
 					<input
+						class="filter"
 						id="price"
 						type="checkbox"
-						name="price"
+						name="Price"
 						value="00-20" />
-						<label
-							for="price"><$20
+							<$20
 						</label>
 					</div>
 					<div>
+						<label for="price">
 						<input
+							class="filter"
 							id="price"
 							type="checkbox"
-							name="price"
+							name="Price"
 							value="20-30" />
-						<label for="price">$20 - <$30</label>
+							$20 - <$30</label>
 					</div>
 					<div>
+						<label for="price">
 						<input
+							class="filter"
 							id="price"
 							type="checkbox"
-							name="price"
+							name="Price"
 							value="30-40" />
-						<label for="price">$30 - <$40</label>
+							$30 - <$40</label>
 					</div>
 					<div>
+						<label for="price">
 						<input
+							class="filter"
 							id="price"
 							type="checkbox"
-							name="price"
+							name="Price"
 							value="40-50" />
-						<label for="price">$40 - <$50</label>
+							$40 - <$50</label>
 					</div>
 					<div>
+						<label for="price">
 						<input
+							class="filter"
 							id="price"
 							type="checkbox"
-							name="price"
+							name="Price"
 							value="50-60" />
-						<label for="price">$50 - <$60</label>
+							$50 - <$60</label>
 					</div>
 					<div>
+						<label for="price">
 						<input
+							class="filter"
 							id="price"
 							type="checkbox"
-							name="price"
+							name="Price"
 							value="60" />
-						<label for="price">$60 and above</label>
+							$60 and above</label>
 					</div>
 				</div>
 				<div>
@@ -103,68 +115,92 @@
 					</button>
 					<div class="content">
 						<div>
-							<input
-								id="manufacturer"
-								type="checkbox"
-								name="manufacturer"
-								value="amd" />
-							<label for="manufacturer">AMD</label>
+							<label for="manufacturer">
+								<input
+									class="filter"
+									id="manufacturer"
+									type="checkbox"
+									name="Manufacturer"
+									value="amd" />
+								AMD
+							</label>
 						</div>
 						<div>
-							<input
-								id="manufacturer"
-								type="checkbox"
-								name="manufacturer"
-								value="asus" />
-							<label for="manufacturer">ASUS</label>
+							<label for="manufacturer">
+								<input
+									class="filter"
+									id="manufacturer"
+									type="checkbox"
+									name="Manufacturer"
+									value="asus" />
+								ASUS
+							</label>
 						</div>
 						<div>
-							<input
-								id="manufacturer"
-								type="checkbox"
-								name="manufacturer"
-								value="evga" />
-							<label for="manufacturer">EVGA</label>
+							<label for="manufacturer">
+								<input
+									class="filter"
+									id="manufacturer"
+									type="checkbox"
+									name="Manufacturer"
+									value="evga" />
+								EVGA
+							</label>
 						</div>
 						<div>
-							<input
-								id="manufacturer"
-								type="checkbox"
-								name="manufacturer"
-								value="gigabyte" />
-							<label for="manufacturer">Gigabyte</label>
+							<label for="manufacturer">
+								<input
+									class="filter"
+									id="manufacturer"
+									type="checkbox"
+									name="Manufacturer"
+									value="gigabyte" />
+								Gigabyte
+							</label>
 						</div>
 						<div>
-							<input
-								id="manufacturer"
-								type="checkbox"
-								name="manufacturer"
-								value="msi" />
-							<label for="manufacturer">MSI</label>
+							<label for="manufacturer">
+								<input
+									class="filter"
+									id="manufacturer"
+									type="checkbox"
+									name="Manufacturer"
+									value="msi" />
+								MSI
+							</label>
 						</div>
 						<div>
-							<input
-								id="manufacturer"
-								type="checkbox"
-								name="manufacturer"
-								value="nvidia" />
-							<label for="manufacturer">Nvidia</label>
+							<label for="manufacturer">
+								<input
+									class="filter"
+									id="manufacturer"
+									type="checkbox"
+									name="Manufacturer"
+									value="nvidia" />
+								Nvidia
+							</label>
 						</div>
 						<div>
-							<input
-								id="manufacturer"
-								type="checkbox"
-								name="manufacturer"
-								value="pny" />
-							<label for="manufacturer">PNY Technologies</label>
+							<label for="manufacturer">
+								<input
+									class="filter"
+									id="manufacturer"
+									type="checkbox"
+									name="Manufacturer"
+									value="pny" />
+								PNY Technologies
+							</label>
 						</div>
 						<div>
-							<input
-								id="manufacturer"
-								type="checkbox"
-								name="manufacturer"
-								value="zotac" />
-							<label for="manufacturer">Zotac</label>
+							<label for="manufacturer">
+								<input
+									class="filter"
+									id="manufacturer"
+									type="checkbox"
+									name="Manufacturer"
+									value="zotac" />
+								Zotac
+							</label>
 						</div>
 					</div>
 					<button
@@ -174,36 +210,48 @@
 					</button>
 					<div class="content">
 						<div>
-							<input
-								id="vram"
-								type="checkbox"
-								name="vram"
-								value="gddr" />
-							<label for="vram">GDDR</label>
+							<label for="vram">
+								<input
+									class="filter"
+									id="vram"
+									type="checkbox"
+									name="VRAM"
+									value="gddr" />
+								GDDR
+							</label>
 						</div>
 						<div>
-							<input
-								id="vram"
-								type="checkbox"
-								name="gpu"
-								value="nvidia" />
-							<label for="vram">Nvidia</label>
+							<label for="vram">
+								<input
+									class="filter"
+									id="vram"
+									type="checkbox"
+									name="VRAM"
+									value="nvidia" />
+								Nvidia
+							</label>
 						</div>
 						<div>
+							<label for="vram">
 							<input
+								class="filter"
 								id="vram"
 								type="checkbox"
-								name="gpu"
+								name="VRAM"
 								value="nvidia" />
-							<label for="vram">Nvidia</label>
+								Nvidia
+							</label>
 						</div>
 						<div>
+							<label for="vram">
 							<input
+								class="filter"
 								id="vram"
 								type="checkbox"
-								name="gpu"
+								name="VRAM"
 								value="nvidia" />
-							<label for="vram">Nvidia</label>
+								Nvidia
+							</label>
 						</div>
 					</div>
 
@@ -214,36 +262,44 @@
 					</button>
 					<div class="content">
 						<div>
+							<label for="clock">
 							<input
+								class="filter"
 								id="clock"
 								type="checkbox"
-								name="gpu"
+								name="Clock"
 								value="nvidia" />
-							<label for="clock">Nvidia</label>
+								Nvidia</label>
 						</div>
 						<div>
+							<label for="clock">
 							<input
+								class="filter"
 								id="clock"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="clock">Nvidia</label>
+								Nvidia</label>
 						</div>
 						<div>
+							<label for="clock">
 							<input
+								class="filter"
 								id="clock"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="clock">Nvidia</label>
+								Nvidia</label>
 						</div>
 						<div>
+							<label for="clock">
 							<input
+								class="filter"
 								id="clock"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="clock">Nvidia</label>
+								Nvidia</label>
 						</div>
 					</div>
 
@@ -254,36 +310,44 @@
 					</button>
 					<div class="content">
 						<div>
+							<label for="gpu">
 							<input
+								class="filter"
 								id="gpu"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="gpu">Nvidia</label>
+								Nvidia</label>
 						</div>
 						<div>
+							<label for="gpu">
 							<input
+								class="filter"
 								id="gpu"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="gpu">Nvidia</label>
+								Nvidia</label>
 						</div>
 						<div>
+							<label for="gpu">
 							<input
+								class="filter"
 								id="gpu"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="gpu">Nvidia</label>
+								Nvidia</label>
 						</div>
 						<div>
+							<label for="gpu">
 							<input
+								class="filter"
 								id="gpu"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="gpu">Nvidia</label>
+								Nvidia</label>
 						</div>
 					</div>
 
@@ -294,36 +358,44 @@
 					</button>
 					<div class="content">
 						<div>
+							<label for="gpu">
 							<input
+								class="filter"
 								id="gpu"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="gpu">Nvidia</label>
+								Nvidia</label>
 						</div>
 						<div>
+							<label for="gpu">
 							<input
+								class="filter"
 								id="gpu"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="gpu">Nvidia</label>
+								Nvidia</label>
 						</div>
 						<div>
+							<label for="gpu">
 							<input
+								class="filter"
 								id="gpu"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="gpu">Nvidia</label>
+								Nvidia</label>
 						</div>
 						<div>
+							<label for="gpu">
 							<input
+								class="filter"
 								id="gpu"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="gpu">Nvidia</label>
+								Nvidia</label>
 						</div>
 					</div>
 
@@ -334,36 +406,44 @@
 					</button>
 					<div class="content">
 						<div>
+							<label for="gpu">
 							<input
+								class="filter"
 								id="gpu"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="gpu">Nvidia</label>
+								Nvidia</label>
 						</div>
 						<div>
+							<label for="gpu">
 							<input
+								class="filter"
 								id="gpu"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="gpu">Nvidia</label>
+								Nvidia</label>
 						</div>
 						<div>
+							<label for="gpu">
 							<input
+								class="filter"
 								id="gpu"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="gpu">Nvidia</label>
+								Nvidia</label>
 						</div>
 						<div>
+							<label for="gpu">
 							<input
+								class="filter"
 								id="gpu"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="gpu">Nvidia</label>
+								Nvidia</label>
 						</div>
 					</div>
 
@@ -374,36 +454,44 @@
 					</button>
 					<div class="content">
 						<div>
+							<label for="gpu">
 							<input
+								class="filter"
 								id="gpu"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="gpu">Nvidia</label>
+								Nvidia</label>
 						</div>
 						<div>
+							<label for="gpu">
 							<input
+								class="filter"
 								id="gpu"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="gpu">Nvidia</label>
+								Nvidia</label>
 						</div>
 						<div>
+							<label for="gpu">
 							<input
+								class="filter"
 								id="gpu"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="gpu">Nvidia</label>
+								Nvidia</label>
 						</div>
 						<div>
+							<label for="gpu">
 							<input
+								class="filter"
 								id="gpu"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="gpu">Nvidia</label>
+								Nvidia</label>
 						</div>
 					</div>
 
@@ -414,36 +502,44 @@
 					</button>
 					<div class="content">
 						<div>
+							<label for="gpu">
 							<input
+								class="filter"
 								id="gpu"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="gpu">Nvidia</label>
+								Nvidia</label>
 						</div>
 						<div>
+							<label for="gpu">
 							<input
+								class="filter"
 								id="gpu"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="gpu">Nvidia</label>
+								Nvidia</label>
 						</div>
 						<div>
+							<label for="gpu">
 							<input
+								class="filter"
 								id="gpu"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="gpu">Nvidia</label>
+								Nvidia</label>
 						</div>
 						<div>
+							<label for="gpu">
 							<input
+								class="filter"
 								id="gpu"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="gpu">Nvidia</label>
+								Nvidia</label>
 						</div>
 					</div>
 
@@ -454,20 +550,24 @@
 					</button>
 					<div class="content">
 						<div>
+							<label for="fan">
 							<input
+								class="filter"
 								id="cooling"
 								type="checkbox"
 								name="cooling"
 								value="fan" />
-							<label for="fan">Fan</label>
+								Fan</label>
 						</div>
 						<div>
+							<label for="heatsink">
 							<input
+								class="filter"
 								id="cooling"
 								type="checkbox"
 								name="cooling"
 								value="heatsink" />
-							<label for="heatsink">Heatsink</label>
+								Heatsink</label>
 						</div>
 					</div>
 
@@ -477,21 +577,25 @@
 						Ray Tracing/DLSS
 					</button>
 					<div class="content">
+						<label for="raytr">
 						<div>
 							<input
+								class="filter"
 								id="ray"
 								type="checkbox"
 								name="ray"
 								value="raytr" />
-							<label for="raytr">Ray Tracing</label>
+								Ray Tracing</label>
 						</div>
 						<div>
+							<label for="DLSS">
 							<input
-								id="ray"
-								type="checkbox"
-								name="ray"
-								value="DLSS" />
-							<label for="DLSS">DLSS</label>
+							class="filter"
+							id="ray"
+							type="checkbox"
+							name="ray"
+							value="DLSS" />
+								DLSS</label>
 						</div>
 					</div>
 
@@ -502,36 +606,44 @@
 					</button>
 					<div class="content">
 						<div>
+							<label for="gpu">
 							<input
+								class="filter"
 								id="gpu"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="gpu">Nvidia</label>
+								Nvidia</label>
 						</div>
 						<div>
+							<label for="gpu">
 							<input
+								class="filter"
 								id="gpu"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="gpu">Nvidia</label>
+								Nvidia</label>
 						</div>
 						<div>
+							<label for="gpu">
 							<input
+								class="filter"
 								id="gpu"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="gpu">Nvidia</label>
+								Nvidia</label>
 						</div>
 						<div>
+							<label for="gpu">
 							<input
+								class="filter"
 								id="gpu"
 								type="checkbox"
 								name="gpu"
 								value="nvidia" />
-							<label for="gpu">Nvidia</label>
+								Nvidia</label>
 						</div>
 					</div>
 				</div>
@@ -546,14 +658,16 @@
 
 
 		<!-- <div style="display: inline-block; width: 50%;"> -->
-		<container id="container">
+		<div id="container">
 			<table id="cardTable">
 				<thead>
 					<tr id="headerRow"></tr>
 				</thead>
 				<tbody id="cardData"></tbody>
 			</table>
-		</container>
+		</div>
+
+		<p id="no-search-results">No search results found.</p>
 		<!-- </div> -->
 		<script
 			src="script.mjs"

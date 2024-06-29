@@ -1,0 +1,26 @@
+// Function to filter data based on selected filters
+function filterData() {
+	const selectedFilters = [];
+	const checkboxes = filtersContainer.querySelectorAll(
+		'input[type="checkbox"]:checked'
+	);
+	for (const checkbox of checkboxes) {
+		selectedFilters.push(checkbox.value);
+	}
+	const filteredData = data.filter((item) => {
+		// Filter logic based on selected filters (modify as needed)
+		let match = false;
+		for (const filter of selectedFilters) {
+			if (
+				item.Manufacturer.includes(filter) ||
+				item.Model.includes(filter) ||
+				item['Best For'].includes(filter)
+			) {
+				match = true;
+				break;
+			}
+		}
+		return match;
+	});
+	populateDataTable(filteredData);
+}
