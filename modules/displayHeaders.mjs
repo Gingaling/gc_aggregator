@@ -4,6 +4,7 @@ export function displayHeaders(headerNames) {
 	const headerRow = document.getElementById('headerRow');
 	headerRow.innerHTML = '';
 
+	console.log("displayHeaders: ", headerNames);
 	for (let j = 0; j < headerNames.length; j++) {
 		const th = document.createElement('th');
 		th.textContent = headerNames[j];
@@ -12,5 +13,6 @@ export function displayHeaders(headerNames) {
 			sortTable(j); // Access j directly within arrow function
 		});
 		headerRow.appendChild(th);
+		console.log("headerRow is: ", headerRow);
 	}
 }

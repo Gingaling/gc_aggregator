@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="chrome-extension://fgddmllnllkalaagkghckoinaemmogpe/scripts/content/gps.js"></script>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Graphic Cards Aggregator</title>
+		<link rel="stylesheet" type="text/css" href="./Graphic Cards Aggregator_files/style.css">
+	</head>
+
+	<body>
+		<!-- <header>Graphic Cards Aggregator</header> -->
+		<div id="alphaSection">
+			<img id="logo" src="./Graphic Cards Aggregator_files/Aggrogator-logo2.png" alt="Aggrogator Logo">
+			<label id="search-label" for="search" style="font-weight: bolder">Search:
+			</label>
+			<img id="searchIcon&quot;" style="width:20px; height:20px;" src="./Graphic Cards Aggregator_files/1024px-Search_Icon.svg.png">
+		
+		<input type="text" id="searchInput" placeholder="find in search results">
+		
+		<h5> -- or --</h5>
+		<h4 id="snippet1">filter your results</h4>
+		<div>
+			<button type="button" class="collapsible" id="price">
+				Price Range
+			</button>
+			<div class="content">
+				<div>
+					<label for="price">
+					<input class="filter" id="price" type="checkbox" name="Price" value="00-20">
+							&lt;$20
+						</label>
+					</div>
+					<div>
+						<label for="price">
+						<input class="filter" id="price" type="checkbox" name="Price" value="20-30">
+							$20 - &lt;$30</label>
+					</div>
+					<div>
+						<label for="price">
+						<input class="filter" id="price" type="checkbox" name="Price" value="30-40">
+							$30 - &lt;$40</label>
+					</div>
+					<div>
+						<label for="price">
+						<input class="filter" id="price" type="checkbox" name="Price" value="40-50">
+							$40 - &lt;$50</label>
+					</div>
+					<div>
+						<label for="price">
+						<input class="filter" id="price" type="checkbox" name="Price" value="50-60">
+							$50 - &lt;$60</label>
+					</div>
+					<div>
+						<label for="price">
+						<input class="filter" id="price" type="checkbox" name="Price" value="60">
+							$60 and above</label>
+					</div>
+				</div>
+				<div>
+					<button type="button" class="collapsible active">
+						Manufacturer
+					</button>
+					<div class="content" style="display: block;">
+						<div>
+							<label for="manufacturer">
+								<input class="filter" id="manufacturer" type="checkbox" name="Manufacturer" value="amd">
+								AMD
+							</label>
+						</div>
+						<div>
+							<label for="manufacturer">
+								<input class="filter" id="manufacturer" type="checkbox" name="Manufacturer" value="asus">
+								ASUS
+							</label>
+						</div>
+						<div>
+							<label for="manufacturer">
+								<input class="filter" id="manufacturer" type="checkbox" name="Manufacturer" value="evga">
+								EVGA
+							</label>
+						</div>
+						<div>
+							<label for="manufacturer">
+								<input class="filter" id="manufacturer" type="checkbox" name="Manufacturer" value="gigabyte">
+								Gigabyte
+							</label>
+						</div>
+						<div>
+							<label for="manufacturer">
+								<input class="filter" id="manufacturer" type="checkbox" name="Manufacturer" value="msi">
+								MSI
+							</label>
+						</div>
+						<div>
+							<label for="manufacturer">
+								<input class="filter" id="manufacturer" type="checkbox" name="Manufacturer" value="nvidia">
+								Nvidia
+							</label>
+						</div>
+						<div>
+							<label for="manufacturer">
+								<input class="filter" id="manufacturer" type="checkbox" name="Manufacturer" value="pny">
+								PNY Technologies
+							</label>
+						</div>
+						<div>
+							<label for="manufacturer">
+								<input class="filter" id="manufacturer" type="checkbox" name="Manufacturer" value="zotac">
+								Zotac
+							</label>
+						</div>
+					</div>
+					<button type="button" class="collapsible">
+						VRAM
+					</button>
+					<div class="content">
+						<div>
+							<label for="vram">
+								<input class="filter" id="vram" type="checkbox" name="VRAM" value="gddr">
+								GDDR
+							</label>
+						</div>
+						<div>
+							<label for="vram">
+								<input class="filter" id="vram" type="checkbox" name="VRAM" value="nvidia">
+								Nvidia
+							</label>
+						</div>
+						<div>
+							<label for="vram">
+							<input class="filter" id="vram" type="checkbox" name="VRAM" value="nvidia">
+								Nvidia
+							</label>
+						</div>
+						<div>
+							<label for="vram">
+							<input class="filter" id="vram" type="checkbox" name="VRAM" value="nvidia">
+								Nvidia
+							</label>
+						</div>
+					</div>
+
+					<button type="button" class="collapsible">
+						Clock Speed
+					</button>
+					<div class="content">
+						<div>
+							<label for="clock">
+							<input class="filter" id="clock" type="checkbox" name="Clock" value="nvidia">
+								Nvidia</label>
+						</div>
+						<div>
+							<label for="clock">
+							<input class="filter" id="clock" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+						<div>
+							<label for="clock">
+							<input class="filter" id="clock" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+						<div>
+							<label for="clock">
+							<input class="filter" id="clock" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+					</div>
+
+					<button type="button" class="collapsible">
+						Memory Bus Width
+					</button>
+					<div class="content">
+						<div>
+							<label for="gpu">
+							<input class="filter" id="gpu" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+						<div>
+							<label for="gpu">
+							<input class="filter" id="gpu" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+						<div>
+							<label for="gpu">
+							<input class="filter" id="gpu" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+						<div>
+							<label for="gpu">
+							<input class="filter" id="gpu" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+					</div>
+
+					<button type="button" class="collapsible">
+						CUDA Cores/Stream Processors
+					</button>
+					<div class="content">
+						<div>
+							<label for="gpu">
+							<input class="filter" id="gpu" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+						<div>
+							<label for="gpu">
+							<input class="filter" id="gpu" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+						<div>
+							<label for="gpu">
+							<input class="filter" id="gpu" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+						<div>
+							<label for="gpu">
+							<input class="filter" id="gpu" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+					</div>
+
+					<button type="button" class="collapsible">
+						TDP
+					</button>
+					<div class="content">
+						<div>
+							<label for="gpu">
+							<input class="filter" id="gpu" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+						<div>
+							<label for="gpu">
+							<input class="filter" id="gpu" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+						<div>
+							<label for="gpu">
+							<input class="filter" id="gpu" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+						<div>
+							<label for="gpu">
+							<input class="filter" id="gpu" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+					</div>
+
+					<button type="button" class="collapsible">
+						Ports
+					</button>
+					<div class="content">
+						<div>
+							<label for="gpu">
+							<input class="filter" id="gpu" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+						<div>
+							<label for="gpu">
+							<input class="filter" id="gpu" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+						<div>
+							<label for="gpu">
+							<input class="filter" id="gpu" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+						<div>
+							<label for="gpu">
+							<input class="filter" id="gpu" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+					</div>
+
+					<button type="button" class="collapsible">
+						Form Factor
+					</button>
+					<div class="content">
+						<div>
+							<label for="gpu">
+							<input class="filter" id="gpu" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+						<div>
+							<label for="gpu">
+							<input class="filter" id="gpu" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+						<div>
+							<label for="gpu">
+							<input class="filter" id="gpu" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+						<div>
+							<label for="gpu">
+							<input class="filter" id="gpu" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+					</div>
+
+					<button type="button" class="collapsible">
+						Cooling Solution
+					</button>
+					<div class="content">
+						<div>
+							<label for="fan">
+							<input class="filter" id="cooling" type="checkbox" name="cooling" value="fan">
+								Fan</label>
+						</div>
+						<div>
+							<label for="heatsink">
+							<input class="filter" id="cooling" type="checkbox" name="cooling" value="heatsink">
+								Heatsink</label>
+						</div>
+					</div>
+
+					<button type="button" class="collapsible">
+						Ray Tracing/DLSS
+					</button>
+					<div class="content">
+						<label for="raytr">
+						<div>
+							<input class="filter" id="ray" type="checkbox" name="ray" value="raytr">
+								Ray Tracing
+						</div>
+						<div>
+							<label for="DLSS">
+							<input class="filter" id="ray" type="checkbox" name="ray" value="DLSS">
+								DLSS</label>
+						</div>
+					</label></div>
+
+					<button type="button" class="collapsible">
+						Connectors
+					</button>
+					<div class="content">
+						<div>
+							<label for="gpu">
+							<input class="filter" id="gpu" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+						<div>
+							<label for="gpu">
+							<input class="filter" id="gpu" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+						<div>
+							<label for="gpu">
+							<input class="filter" id="gpu" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+						<div>
+							<label for="gpu">
+							<input class="filter" id="gpu" type="checkbox" name="gpu" value="nvidia">
+								Nvidia</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<input type="file" id="fileInput" accept=".txt" value="Hi">
+		</div>
+
+
+
+		<!-- <div style="display: inline-block; width: 50%;"> -->
+		<div id="container">
+			<table id="cardTable"><tr id="headerRow" style=""><th>Price</th><th>Manufacturer</th><th>Model</th><th>BestFor</th><th>VRAM</th><th>Features</th><th>AffiliateLink</th></tr><tr>
+					<td>15.00</td>
+                    <td> MSI</td>
+					<td> Radeon RX 5700 XT Gaming X</td>
+                    <td>Great cooling performance</td>
+					<td>8GB GDDR6</td>
+                    <td>PCIe 4.0</td>
+					<td>filler</td>
+                </tr><tr>
+					<td>19.00</td>
+                    <td> Sapphire</td>
+					<td> Pulse Radeon RX 5500 XT</td>
+                    <td>Solid 1080p gaming</td>
+					<td>8GB GDDR6</td>
+                    <td>Dual-X cooling</td>
+					<td>(filler)</td>
+                </tr><tr style="">
+					<td>19.99</td>
+                    <td>NVIDIA</td>
+					<td>GeForce GTX 680</td>
+                    <td>High-end (ancient gen)</td>
+					<td>2GB GDDR6</td>
+                    <td>Not recommended for modern use</td>
+					<td>(filler)</td>
+                </tr><tr>
+					<td>24.00</td>
+                    <td> NVIDIA</td>
+					<td> GeForce RTX 3080</td>
+                    <td>High-end gaming GPU</td>
+					<td>8GB GDDR6X</td>
+                    <td>Ray tracing support</td>
+					<td>(filler)</td>
+                </tr><tr>
+					<td>29.00</td>
+                    <td> NVIDIA</td>
+					<td> GeForce GTX 1660 Super</td>
+                    <td>Budget-friendly option</td>
+					<td>6GB GDDR5</td>
+                    <td>1080p gaming</td>
+					<td>(filler)</td>
+                </tr><tr style="">
+					<td>37.00</td>
+                    <td> XFX</td>
+					<td> Radeon RX 5600 XT Thicc II Pro</td>
+                    <td>Competitive performance</td>
+					<td>6GB GDDR6</td>
+                    <td>Factory overclocked</td>
+					<td>(filler)</td>
+                </tr><tr style="">
+					<td>39.99</td>
+                    <td>AMD</td>
+					<td>Radeon HD 7970</td>
+                    <td>High-end (extremely old gen)</td>
+					<td>3GB GDDR5</td>
+                    <td>For enthusiasts or use in specific older machine builds only</td>
+					<td>(filler)</td>
+                </tr><tr style="">
+					<td>46.00</td>
+                    <td> ZOTAC</td>
+					<td> GeForce GT 1030</td>
+                    <td>Basic GPU for HTPCs</td>
+					<td>2GB GDDR5</td>
+                    <td>Low-profile design</td>
+					<td>(filler)</td>
+                </tr><tr>
+					<td>48.00</td>
+                    <td> ASUS</td>
+					<td> TUF Gaming GeForce GTX 1650</td>
+                    <td>Entry-level gaming card</td>
+					<td>4GB GDDR5</td>
+                    <td>Low power consumption</td>
+					<td>(filler)</td>
+                </tr><tr style="">
+					<td>49.99</td>
+                    <td>NVIDIA</td>
+					<td>GeForce GTX 780</td>
+                    <td>High-end (very old gen)</td>
+					<td>3GB GDDR5</td>
+                    <td>Not recommended for modern use</td>
+					<td>(filler)</td>
+                </tr><tr>
+					<td>55.00</td>
+                    <td> AMD</td>
+					<td> Radeon RX 6800 XT</td>
+                    <td>Powerful for 4K gaming</td>
+					<td>16GB GDDR6</td>
+                    <td>RDNA 2 architecture</td>
+					<td>(filler)</td>
+                </tr><tr style="">
+					<td>75.00</td>
+                    <td> Gigabyte</td>
+					<td> AORUS GeForce RTX 3090</td>
+                    <td>Extreme performance</td>
+					<td>24GB GDDR6X</td>
+                    <td>Triple-fan design</td>
+					<td>(filler)</td>
+                </tr><tr style="">
+					<td>79.99</td>
+                    <td>AMD</td>
+					<td>Radeon R9 290</td>
+                    <td>High-end (very old gen)</td>
+					<td>4GB GDDR5</td>
+                    <td>Collectible or for use in specific older machine builds only</td>
+					<td>(filler)</td>
+                </tr><tr style="">
+					<td>99.99</td>
+                    <td>NVIDIA</td>
+					<td>GeForce GTX 970</td>
+                    <td>High-end (much older gen)</td>
+					<td>4GB GDDR5</td>
+                    <td>Not recommended for modern games, may find use in budget builds</td>
+					<td>(filler)</td>
+                </tr><tr>
+					<td>119.99</td>
+                    <td>AMD</td>
+					<td>Radeon RX 570</td>
+                    <td>Entry-level (previous gen)</td>
+					<td>4GB GDDR5</td>
+                    <td>Budget-friendly option for 1080p gaming at lower settings</td>
+					<td>(filler)</td>
+                </tr><tr>
+					<td>122.00</td>
+                    <td> EVGA</td>
+					<td> GeForce RTX 3060 Ti XC Gaming</td>
+                    <td>Mid-range powerhouse</td>
+					<td>8GB GDDR6</td>
+                    <td>DLSS support</td>
+					<td>(filler)</td>
+                </tr><tr>
+					<td>149.99</td>
+                    <td>NVIDIA</td>
+					<td>GeForce GTX 1060</td>
+                    <td>Mid-range (previous gen)</td>
+					<td>6GB GDDR5</td>
+                    <td>Still a viable option for 1080p gaming</td>
+					<td>(filler)</td>
+                </tr><tr style="">
+					<td>159.99</td>
+                    <td>NVIDIA</td>
+					<td>GeForce GTX 1650 Super</td>
+                    <td>Entry-level (previous gen)</td>
+					<td>4GB GDDR6</td>
+                    <td>Great value for esports and older games</td>
+					<td>(filler)</td>
+                </tr><tr>
+					<td>179.99</td>
+                    <td>NVIDIA</td>
+					<td>GeForce GTX 1650</td>
+                    <td>Entry-level gaming GPU</td>
+					<td>4GB GDDR6</td>
+                    <td>Great value for budget-conscious gamers</td>
+					<td>(filler)</td>
+                </tr><tr>
+					<td>199.99</td>
+                    <td>AMD</td>
+					<td>Radeon RX 580</td>
+                    <td>Mid-range (previous gen)</td>
+					<td>8GB GDDR5</td>
+                    <td>Value option for 1080p gaming</td>
+					<td>(filler)</td>
+                </tr><tr style="">
+					<td>199.99</td>
+                    <td>AMD</td>
+					<td>Radeon RX 480</td>
+                    <td>High-performance (older gen)</td>
+					<td>8GB GDDR5</td>
+                    <td>Can be found at lower prices, good for older games</td>
+					<td>(filler)</td>
+                </tr><tr>
+					<td>249.99</td>
+                    <td>AMD</td>
+					<td>Radeon RX 5600 XT</td>
+                    <td>Mid-range (previous gen)</td>
+					<td>6GB GDDR6</td>
+                    <td>Capable 1080p gaming at high frame rates</td>
+					<td>(filler)</td>
+                </tr><tr>
+					<td>279.99</td>
+                    <td>NVIDIA</td>
+					<td>GeForce GTX 1660 Super</td>
+                    <td>Mid-range (previous gen)</td>
+					<td>6GB GDDR6</td>
+                    <td>Popular choice for 1080p gaming at high settings</td>
+					<td>(filler)</td>
+                </tr><tr>
+					<td>299.99</td>
+                    <td>AMD</td>
+					<td>Radeon RX 6600</td>
+                    <td>Entry-level gaming GPU</td>
+					<td>8GB GDDR6</td>
+                    <td>Solid option for 1080p gaming</td>
+					<td>(filler)</td>
+                </tr><tr>
+					<td>349.99</td>
+                    <td>NVIDIA</td>
+					<td>GeForce RTX 3060</td>
+                    <td>Mid-range gaming GPU</td>
+					<td>12GB GDDR6</td>
+                    <td>Capable of handling 1080p and 1440p gaming at high frame rates</td>
+					<td>(filler)</td>
+                </tr><tr>
+					<td>379.99</td>
+                    <td>AMD</td>
+					<td>Radeon RX 6600 XT</td>
+                    <td>Mid-range gaming GPU</td>
+					<td>8GB GDDR6</td>
+                    <td>FidelityFX Super Resolution for boosted frame rates</td>
+					<td>(filler)</td>
+                </tr><tr style="">
+					<td>399.99</td>
+                    <td>AMD</td>
+					<td>Radeon RX Vega 64</td>
+                    <td>High-performance (previous gen)</td>
+					<td>16GB HBM2</td>
+                    <td>Large amount of VRAM for demanding tasks</td>
+					<td>(filler)</td>
+                </tr><tr>
+					<td>429.99</td>
+                    <td>NVIDIA</td>
+					<td>GeForce RTX 3080</td>
+                    <td>High-end gaming GPU</td>
+					<td>10GB GDDR6X</td>
+                    <td>DLSS and powerful performance for AAA games</td>
+					<td>(filler)</td>
+                </tr><tr style="">
+					<td>499.99</td>
+                    <td>NVIDIA</td>
+					<td>GeForce GTX 1080 Ti</td>
+                    <td>High-end (previous gen)</td>
+					<td>11GB GDDR5X</td>
+                    <td>Powerful card for enthusiasts, may require stronger PSU</td>
+					<td>(filler)</td>
+                </tr><tr>
+					<td>529.99</td>
+                    <td>AMD</td>
+					<td>Radeon RX 6700 XT</td>
+                    <td>High-performance gaming GPU</td>
+					<td>12GB GDDR6</td>
+                    <td>Excellent ray tracing capabilities</td>
+					<td>(filler)</td>
+                </tr><tr>
+					<td>579.99</td>
+                    <td>AMD</td>
+					<td>Radeon RX 6800 XT</td>
+                    <td>High-end gaming GPU</td>
+					<td>16GB GDDR6</td>
+                    <td>Excellent ray tracing capabilities for demanding titles</td>
+					<td>(filler)</td>
+                </tr><tr>
+					<td>599.99</td>
+                    <td>NVIDIA</td>
+					<td>GeForce RTX 3070</td>
+                    <td>High-performance gaming GPU</td>
+					<td>8GB GDDR6</td>
+                    <td>DLSS and ray tracing support</td>
+					<td>(filler)</td>
+                </tr></table>
+		</div>
+
+		<p id="no-search-results">No search results found.</p>
+		<!-- </div> -->
+		<script src="./Graphic Cards Aggregator_files/script.mjs" type="module"></script>
+	<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
